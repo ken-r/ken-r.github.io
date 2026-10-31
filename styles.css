@@ -37,20 +37,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 0;
+  padding: 24px 0;
   border-bottom: 1px solid var(--line);
-}
-
-.brand {
-  font-weight: 700;
-  letter-spacing: -.04em;
-  color: var(--text);
-  text-decoration: none;
 }
 
 nav {
   display: flex;
-  gap: 22px;
+  align-items: center;
+  gap: 28px;
 }
 
 a {
@@ -63,9 +57,22 @@ a:hover {
 }
 
 nav a {
-  font-size: 14px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
   color: var(--muted);
   text-decoration: none;
+}
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.home-link img {
+  display: block;
+  width: 76px;
+  height: 76px;
 }
 
 main {
@@ -118,8 +125,13 @@ h2 {
   margin: 36px 0 12px;
 }
 
-#projects > h2 + .group-title {
+section > h2 + .group-title {
   margin-top: 0;
+}
+
+#hobbies p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .project {
@@ -134,10 +146,6 @@ h2 {
 .project h4 {
   font-size: 16px;
   margin: 0 0 4px;
-}
-
-.project-title {
-  color: var(--text);
 }
 
 .project p {
@@ -173,7 +181,16 @@ footer {
   }
 
   nav {
-    gap: 14px;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .home-link img {
+    width: 60px;
+    height: 60px;
   }
 
   main {
