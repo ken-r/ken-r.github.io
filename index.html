@@ -54,14 +54,19 @@
             </ul>
             {% endif %}
             <p>{{ project.summary }}</p>
+            {% assign detail_page = site.pages | where: 'project', project.slug | first %}
+            {% if detail_page or project.links %}
             <div class="project-links">
-              <a class="details-link" href="{{ '/projects/' | append: project.slug | append: '.html' | relative_url }}">Details</a>
+              {% if detail_page %}
+              <a class="details-link" href="{{ detail_page.url | relative_url }}">Details</a>
+              {% endif %}
               {% if project.links %}
               {% for link in project.links %}
               <a href="{{ link.url }}">{{ link.label }}</a>
               {% endfor %}
               {% endif %}
             </div>
+            {% endif %}
           </div>
           {% if project.duration %}<span class="project-date">{{ project.duration }}</span>{% endif %}
         </article>
