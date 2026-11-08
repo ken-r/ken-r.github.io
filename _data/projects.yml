@@ -1,0 +1,84 @@
+- slug: neural-process-boosting
+  title: "Master's Thesis: Neural Process Boosting (NPBoost)"
+  duration: 02/2026 - 08/2026
+  tech_stack: [Python, PyTorch, Weights and Biases, Git]
+  summary: Extended and improved NPBoost, a probabilistic meta-learning model, using Python and PyTorch.
+  category: University Projects
+
+- slug: lesion-growth
+  title: "Statistics Lab: Modeling Lesion Growth"
+  duration: 02/2025 - 06/2025
+  tech_stack: [R, tidyverse]
+  summary: Modeled disease lesion growth across wheat cultivars using R to support a research project.
+  category: University Projects
+
+- slug: soccer-analytics
+  title: Soccer Analytics
+  duration: 02/2025 - 06/2025
+  tech_stack: [Python, pandas]
+  summary: Analyzed the defensive play of the Spanish national team using Python and pandas.
+  category: University Projects
+
+- slug: applied-geodata-science
+  title: Applied Geodata Science
+  duration: 02/2023 - 06/2023
+  tech_stack: [R, Git]
+  summary: Applied machine learning to environmental data using R and Git.
+  category: University Projects
+  links:
+    - label: GitHub
+      url: https://github.com/ken-r/applied-geodata-science-report
+
+- slug: secretary-problem
+  title: "Bachelor's Thesis: The Secretary Problem"
+  duration: 09/2022 - 12/2022
+  tech_stack: [R]
+  summary: Studied variants of the secretary problem theoretically and explored others through simulations in R.
+  category: University Projects
+
+- slug: working-time-app
+  title: "Mobile App: Tracking Working Time"
+  duration: 02/2022 - 06/2022
+  tech_stack: [Flutter, Kotlin, Git]
+  summary: Developed a mobile app for a local business using Flutter, Kotlin and Git.
+  category: University Projects
+
+- slug: community-posting-app
+  title: "Full-Stack Web App: Community Posting and Shopping"
+  duration: 09/2021 - 12/2021
+  tech_stack: [Angular, Express, HTML, CSS, Git]
+  summary: Developed a full-stack web app using Angular, Express, HTML/CSS and Git.
+  category: University Projects
+
+- slug: health-insurance-cost-explorer
+  title: Health Insurance Cost Explorer
+  duration: 09/2025 - present
+  tech_stack: [Python, Shiny]
+  summary: Building a Python tool that compares health insurance providers using publicly available premium data.
+  category: Private Projects
+  links:
+    - label: GitHub
+      url: https://github.com/ken-r/health-insurance-cost-explorer
+    - label: Live site
+      url: https://ken-r-health-insurance-cost-explorer.share.connect.posit.cloud
+
+- slug: mehmooni
+  title: mehmooni
+  duration: 10/2026 - present
+  summary: Building a website for learning Persian (Farsi) through audio recordings.
+  category: Private Projects
+  links:
+    - label: GitHub
+      url: https://github.com/ken-r/mehmooni
+    - label: Live site
+      url: https://ken-r.github.io/mehmooni
+
+- slug: insurance-portfolio-risk-model
+  title: Insurance Portfolio Risk Model
+  duration: 10/2026 - present
+  tech_stack: [Python]
+  summary: Building a model to simulate an insurance portfolio and analyze its risk.
+  category: Private Projects
+  links:
+    - label: GitHub
+      url: https://github.com/ken-r/insurance-portfolio-risk-model

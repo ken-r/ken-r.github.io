@@ -1,4 +1,5 @@
-
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Personal website and selected projects.">
   <title>Ken | Portfolio</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
 </head>
 <body>
   <div class="wrap">
     <header>
       <nav>
-        <a class="home-link" href="#top"><img src="favicon.svg" width="76" height="76" alt=""></a>
+        <a class="home-link" href="#top"><img src="{{ '/favicon.svg' | relative_url }}" width="76" height="76" alt="Home"></a>
         <a href="#projects">Projects</a>
         <a href="#hobbies">Hobbies</a>
       </nav>
@@ -39,104 +40,27 @@
 
       <section id="projects">
         <h2>Projects</h2>
-        <h3 class="group-title">University Projects</h3>
-
-        <div class="project">
+        {% assign categories = site.data.projects | map: "category" | uniq %}
+        {% for category in categories %}
+        <h3 class="group-title">{{ category }}</h3>
+        {% assign projects = site.data.projects | where: "category", category %}
+        {% for project in projects %}
+        <article class="project">
           <div>
-            <h4>Master's Thesis: Neural Process Boosting (NPBoost)</h4>
-            <p>Extended and improved NPBoost, a probabilistic meta-learning model, using Python and PyTorch.</p>
-          </div>
-          <span class="project-date">02/2026 - 08/2026</span>
-        </div>
-
-        <div class="project">
-          <div>
-            <h4>Statistics Lab: Modeling Lesion Growth</h4>
-            <p>Modeled disease lesion growth across wheat cultivars using R to support a research project.</p>
-          </div>
-          <span class="project-date">02/2025 - 06/2025</span>
-        </div>
-
-        <div class="project">
-          <div>
-            <h4>Soccer Analytics</h4>
-            <p>Analyzed the defensive play of the Spanish national team using Python and pandas.</p>
-          </div>
-          <span class="project-date">02/2025 - 06/2025</span>
-        </div>
-
-        <div class="project">
-          <div>
-            <h4>Applied Geodata Science</h4>
-            <p>Applied machine learning to environmental data using R and Git.</p>
+            <h4>{{ project.title }}</h4>
+            <p>{{ project.summary }}</p>
+            {% if project.links %}
             <div class="project-links">
-              <a href="https://github.com/ken-r/applied-geodata-science-report">GitHub ↗</a>
+              {% for link in project.links %}
+              <a href="{{ link.url }}">{{ link.label }} ↗</a>
+              {% endfor %}
             </div>
+            {% endif %}
           </div>
-          <span class="project-date">02/2023 - 06/2023</span>
-        </div>
-
-        <div class="project">
-          <div>
-            <h4>Bachelor's Thesis: The Secretary Problem</h4>
-            <p>Studied variants of the secretary problem theoretically and explored others through simulations in R.</p>
-          </div>
-          <span class="project-date">09/2022 - 12/2022</span>
-        </div>
-
-        <div class="project">
-          <div>
-            <h4>Mobile App: Tracking Working Time</h4>
-            <p>Developed a mobile app for a local business using Flutter, Kotlin and Git.</p>
-          </div>
-          <span class="project-date">02/2022 - 06/2022</span>
-        </div>
-
-        <div class="project">
-          <div>
-            <h4>Full-Stack Web App: Community Posting and Shopping</h4>
-            <p>Developed a full-stack web app using Angular, Express, HTML/CSS and Git.</p>
-          </div>
-          <span class="project-date">09/2021 - 12/2021</span>
-        </div>
-
-        <h3 class="group-title">Private Projects</h3>
-
-        <div class="project">
-          <div>
-            <h4>Health Insurance Cost Explorer</h4>
-            <p>Building a Python tool that compares health insurance providers using publicly available premium data.</p>
-            <div class="project-links">
-              <a href="https://github.com/ken-r/health-insurance-cost-explorer">GitHub ↗</a>
-              <a href="https://ken-r-health-insurance-cost-explorer.share.connect.posit.cloud">Live site ↗</a>
-            </div>
-          </div>
-          <span class="project-date">09/2025 - present</span>
-        </div>
-
-        <div class="project">
-          <div>
-            <h4>mehmooni</h4>
-            <p>Building a website for learning Persian (Farsi) through audio recordings.</p>
-            <div class="project-links">
-              <a href="https://github.com/ken-r/mehmooni">GitHub ↗</a>
-              <a href="https://ken-r.github.io/mehmooni">Live site ↗</a>
-            </div>
-          </div>
-          <span class="project-date">10/2026 - present</span>
-        </div>
-
-
-        <div class="project">
-          <div>
-            <h4>Insurance Portfolio Risk Model</h4>
-            <p>Building a model to simulate an insurance portfolio and analyze its risk.</p>
-            <div class="project-links">
-              <a href="https://github.com/ken-r/insurance-portfolio-risk-model">GitHub ↗</a>
-            </div>
-          </div>
-          <span class="project-date">10/2026 - present</span>
-        </div>
+          {% if project.duration %}<span class="project-date">{{ project.duration }}</span>{% endif %}
+        </article>
+        {% endfor %}
+        {% endfor %}
       </section>
 
       <section id="hobbies">
