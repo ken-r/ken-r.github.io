@@ -147,6 +147,18 @@ section > h2 + .group-title {
 #hobbies p {
   margin: 0;
   color: var(--muted);
+  font-size: 14px;
+}
+
+#hobbies .group-title {
+  font-size: 16px;
+  margin: 24px 0 4px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+#hobbies > h2 + .group-title {
+  margin-top: 0;
 }
 
 .project {
