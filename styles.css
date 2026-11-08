@@ -126,6 +126,10 @@ h1 {
   content: " ↗";
 }
 
+.project-links .details-link::after {
+  content: " →";
+}
+
 section {
   margin-top: 40px;
 }
@@ -220,6 +224,69 @@ footer {
   padding: 26px 0 42px;
   color: var(--muted);
   font-size: 13px;
+}
+
+/* Shared detail-page styles also work for future hobby stories. */
+.detail-page {
+  padding-top: 26px;
+}
+
+.detail-page h1 {
+  margin-bottom: 18px;
+}
+
+.project-detail h1 {
+  font-size: clamp(32px, 5vw, 46px);
+  letter-spacing: -.04em;
+}
+
+.detail-meta {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detail-summary {
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+
+.project-detail .project-tech {
+  margin: 0 0 16px;
+}
+
+.detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 28px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.detail-story {
+  margin-top: 58px;
+}
+
+.project-detail .detail-story {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.detail-story h2 {
+  margin: 28px 0 6px;
+  font-size: 17px;
+}
+
+.detail-story p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.detail-story p + p {
+  margin-top: 1em;
 }
 
 @media (max-width: 520px) {

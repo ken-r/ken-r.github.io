@@ -54,13 +54,14 @@
             </ul>
             {% endif %}
             <p>{{ project.summary }}</p>
-            {% if project.links %}
             <div class="project-links">
+              <a class="details-link" href="{{ '/projects/' | append: project.slug | append: '.html' | relative_url }}">Details</a>
+              {% if project.links %}
               {% for link in project.links %}
               <a href="{{ link.url }}">{{ link.label }}</a>
               {% endfor %}
+              {% endif %}
             </div>
-            {% endif %}
           </div>
           {% if project.duration %}<span class="project-date">{{ project.duration }}</span>{% endif %}
         </article>

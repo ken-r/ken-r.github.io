@@ -1,0 +1,45 @@
+{% assign project = site.data.projects | where: 'slug', page.project | first %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ project.summary | escape }}">
+  <title>{{ project.title | escape }} | Ken</title>
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <nav>
+        <a class="home-link" href="{{ '/#top' | relative_url }}"><img src="{{ '/favicon.svg' | relative_url }}" width="76" height="76" alt="Home"></a>
+        <a href="{{ '/#projects' | relative_url }}">Projects</a>
+        <a href="{{ '/#hobbies' | relative_url }}">Hobbies</a>
+      </nav>
+    </header>
+
+    <main class="detail-page project-detail">
+      {% if project.duration %}<p class="detail-meta">{{ project.duration }}</p>{% endif %}
+      <h1>{{ project.title }}<span class="accent">.</span></h1>
+      {% if project.tech_stack %}
+      <ul class="project-tech">
+        {% for tech in project.tech_stack %}<li>{{ tech }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+      <p class="detail-summary">{{ project.summary }}</p>
+      {% if project.links %}
+      <div class="detail-links">
+        {% for link in project.links %}
+        <a href="{{ link.url }}">{{ link.label }} ↗</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="detail-story">{{ content }}</div>
+    </main>
+
+    <footer>© 2026 Ken Rölli</footer>
+  </div>
+</body>
+</html>
