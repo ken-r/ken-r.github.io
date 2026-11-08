@@ -33,8 +33,8 @@
         In my free time, I enjoy playing football, baking and playing chess.
         </p>
         <div class="links">
-          <a href="https://github.com/ken-r">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/kroelli">LinkedIn ↗</a>
+          <a href="https://github.com/ken-r">GitHub</a>
+          <a href="https://www.linkedin.com/in/kroelli">LinkedIn</a>
         </div>
       </div>
 
@@ -46,13 +46,18 @@
         {% assign projects = site.data.projects | where: "category", category %}
         {% for project in projects %}
         <article class="project">
-          <div>
+          <div class="project-body">
             <h4>{{ project.title }}</h4>
+            {% if project.tech_stack %}
+            <ul class="project-tech">
+              {% for tech in project.tech_stack %}<li>{{ tech }}</li>{% endfor %}
+            </ul>
+            {% endif %}
             <p>{{ project.summary }}</p>
             {% if project.links %}
             <div class="project-links">
               {% for link in project.links %}
-              <a href="{{ link.url }}">{{ link.label }} ↗</a>
+              <a href="{{ link.url }}">{{ link.label }}</a>
               {% endfor %}
             </div>
             {% endif %}
