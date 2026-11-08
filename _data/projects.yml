@@ -55,7 +55,7 @@
   duration: 09/2025 - present
   tech_stack: [Python, Shiny]
   summary: Building a tool that compares health insurance providers using publicly available premium data.
-  category: Private Projects
+  category: Personal Projects
   links:
     - label: GitHub
       url: https://github.com/ken-r/health-insurance-cost-explorer
@@ -66,7 +66,7 @@
   title: mehmooni
   duration: 10/2026 - present
   summary: Building a website for learning Persian (Farsi) through audio recordings.
-  category: Private Projects
+  category: Personal Projects
   links:
     - label: GitHub
       url: https://github.com/ken-r/mehmooni
@@ -78,7 +78,7 @@
   duration: 10/2026 - present
   tech_stack: [Python]
   summary: Building a model to simulate an insurance portfolio and analyze its risk.
-  category: Private Projects
+  category: Personal Projects
   links:
     - label: GitHub
       url: https://github.com/ken-r/insurance-portfolio-risk-model
