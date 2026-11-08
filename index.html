@@ -40,7 +40,7 @@
 
       <section id="projects">
         <h2>Projects</h2>
-        {% assign categories = site.data.projects | map: "category" | uniq %}
+        {% assign categories = site.data.projects | map: "category" | uniq | sort %}
         {% for category in categories %}
         <h3 class="group-title">{{ category }}</h3>
         {% assign projects = site.data.projects | where: "category", category %}
