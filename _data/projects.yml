@@ -2,28 +2,28 @@
   title: "Master's Thesis: Neural Process Boosting (NPBoost)"
   duration: 02/2026 - 08/2026
   tech_stack: [Python, PyTorch, Weights and Biases, Git]
-  summary: Extended and improved NPBoost, a probabilistic meta-learning model, using Python and PyTorch.
+  summary: Extended and improved NPBoost, a probabilistic meta-learning model.
   category: University Projects
 
 - slug: lesion-growth
   title: "Statistics Lab: Modeling Lesion Growth"
   duration: 02/2025 - 06/2025
   tech_stack: [R, tidyverse]
-  summary: Modeled disease lesion growth across wheat cultivars using R to support a research project.
+  summary: Modeled disease lesion growth across wheat cultivars to support a research project.
   category: University Projects
 
 - slug: soccer-analytics
   title: Soccer Analytics
   duration: 02/2025 - 06/2025
   tech_stack: [Python, pandas]
-  summary: Analyzed the defensive play of the Spanish national team using Python and pandas.
+  summary: Analyzed the defensive play of the Spanish national team.
   category: University Projects
 
 - slug: applied-geodata-science
   title: Applied Geodata Science
   duration: 02/2023 - 06/2023
   tech_stack: [R, Git]
-  summary: Applied machine learning to environmental data using R and Git.
+  summary: Applied machine learning to environmental data.
   category: University Projects
   links:
     - label: GitHub
@@ -33,28 +33,28 @@
   title: "Bachelor's Thesis: The Secretary Problem"
   duration: 09/2022 - 12/2022
   tech_stack: [R]
-  summary: Studied variants of the secretary problem theoretically and explored others through simulations in R.
+  summary: Studied variants of the secretary problem theoretically and explored others through simulations.
   category: University Projects
 
 - slug: working-time-app
   title: "Mobile App: Tracking Working Time"
   duration: 02/2022 - 06/2022
   tech_stack: [Flutter, Kotlin, Git]
-  summary: Developed a mobile app for a local business using Flutter, Kotlin and Git.
+  summary: Developed a mobile app for a local business to track working time and available holidays.
   category: University Projects
 
 - slug: community-posting-app
   title: "Full-Stack Web App: Community Posting and Shopping"
   duration: 09/2021 - 12/2021
   tech_stack: [Angular, Express, HTML, CSS, Git]
-  summary: Developed a full-stack web app using Angular, Express, HTML/CSS and Git.
+  summary: Developed a full-stack web app for community posts and shopping.
   category: University Projects
 
 - slug: health-insurance-cost-explorer
   title: Health Insurance Cost Explorer
   duration: 09/2025 - present
   tech_stack: [Python, Shiny]
-  summary: Building a Python tool that compares health insurance providers using publicly available premium data.
+  summary: Building a tool that compares health insurance providers using publicly available premium data.
   category: Private Projects
   links:
     - label: GitHub
